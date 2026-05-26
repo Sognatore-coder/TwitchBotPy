@@ -3,6 +3,8 @@ import random
 import requests
 import xml.etree.ElementTree as ET
 from translator import translate
+
+_shown_urls = set()
  
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -71,7 +73,6 @@ def _collect_articles() -> list[dict]:
  
  
 def gaming_news() -> str:
-    global _shown_urls
     try:
         articles = _collect_articles()
         if not articles:
