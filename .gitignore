@@ -1,0 +1,11 @@
+# Токены и секреты
+.env
+config.py
+
+# Кэш Python
+__pycache__/
+*.pyc
+
+# Логи
+logs/
+*.log
